@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- javascript -->
+    <script type="text/javascript" src="functions.js"></script>
+
+    <!-- ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> 
+
+    <!-- open sans text -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
+    <!-- <link rel="icon" href="icon_path" type="image/icon type"> -->
+        <!-- <ion-icon class="musicIcon" name="musical-notes-outline" size="large"></ion-icon> -->
+
+    <title>GenREate</title>
+</head>
+
+<body id="customize">
+
+    <div class="customPlaylistTitle">
+        <h1>Here's Your Custom Playlist</h1>   
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="playlistDetailsRow">
+
+        <img class="newPlaylistCover" src="photos/pfizer.jpg"> 
+
+        <div class="playlistHeading">
+            <p>Playlist</p>
+            <h1>Custom Playlist #1</h1>
+            <p>10 songs, 1 hr 24 min</p>
+        </div>
+    
+    </div>
+    
+
+
+
+
+
+
+    <div class="columnSongs">
+
+        <a href="#" id="1" class="song">
+            <p class="songNumber">1</p>
+            <img class="songCover" src="photos/IMG_7045.jpg"> 
+            <div class=songInfo>
+                <p class="songTitle">Me, Myself and I</p>
+                <p class="songArtist">Beyoncé</p>  
+            </div>
+            <p class="songDuration">5:01</p>
+        </a>
+
+        <a href="#" id="2" class="song">
+            <p class="songNumber">2</p>
+            <img class="songCover" src="photos/IMG_7046.jpg"> 
+            <div class=songInfo>
+                <p class="songTitle">BUENOS AIRES</p>
+                <p class="songArtist">Nathy Peluso</p>  
+            </div>
+            <p class="songDuration">4:00</p>
+        </a>
+
+        <a href="#" id="3" class="song">
+            <p class="songNumber">3</p>
+            <img class="songCover" src="photos/IMG_7047.jpg"> 
+            <div class=songInfo>
+                <p class="songTitle">Show Me How</p>
+                <p class="songArtist">Men I Trust</p>  
+            </div>
+            <p class="songDuration">3:35</p>
+        </a>
+
+        <a href="#" id="4" class="song">
+            <p class="songNumber">4</p>
+            <img class="songCover" src="photos/IMG_7044 2.jpg"> 
+            <div class=songInfo>
+                <p class="songTitle">Drive and Disconnect</p>
+                <p class="songArtist">Nao</p>  
+            </div>
+            <p class="songDuration">3:30</p>
+        </a>
+
+        <a href="#" id="5" class="song">
+            <p class="songNumber">5</p>
+            <img class="songCover" src="photos/IMG_7043.jpg"> 
+            <div class=songInfo>
+                <p class="songTitle">Saturn</p>
+                <p class="songArtist">RIZ LA VIE</p>  
+            </div>
+            <p class="songDuration">3:28</p>
+        </a>
+
+        <a href="#" id="6" class="song">
+            <p class="songNumber">6</p>
+            <img class="songCover" src="photos/IMG_7041.jpg"> 
+            <div class=songInfo>
+                <p class="songTitle">Savage Remix (feat. Beyoncé)</p>
+                <p class="songArtist">Beyoncé, Megan Thee Stallion</p>  
+            </div>
+            <p class="songDuration">4:02</p>
+        </a>
+
+        <a href="#" id="7" class="song">
+            <p class="songNumber">7</p>
+            <img class="songCover" src="photos/IMG_7048.jpg"> 
+            <div class=songInfo>
+                <p class="songTitle">Hold On</p>
+                <p class="songArtist">Justin Beiber</p>  
+            </div>
+            <p class="songDuration">2:50</p>
+        </a>
+
+        <a href="#" id="8" class="song">
+            <p class="songNumber">8</p>
+            <img class="songCover" src="photos/IMG_7040.jpg"> 
+            <div class=songInfo>
+                <p class="songTitle">Buttercup</p>
+                <p class="songArtist">Jack Stauber</p>  
+            </div>
+            <p class="songDuration">3:28</p>
+        </a>
+
+    </div>
+
+
+
+
+    <div class="buttonRow">
+        <button class="button" onclick="addPlaylist()">Add Playlist To Spotify</button>
+    </div>    
+
+    <div class="buttonRow">
+        <button class="button" onclick="newPlaylist()">Create New Playlist</button>
+    </div>
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelector(".playlistCover"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.5
+        });
+    </script>
+
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".song"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.5
+        });
+    </script>
+
+
+
+
+
+
+
+    <div class="configurations">
+        <a href="#" onclick="changeLightMode();"><ion-icon id="lightModeIcon" name="moon-outline" size="small"></ion-icon></a>
+    </div>    
+
+</body>
+</html>

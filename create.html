@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- javascript -->
+    <script type="text/javascript" src="functions.js"></script>
+
+    <!-- ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> 
+
+    <!-- open sans text -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
+
+    <title>GenREate</title>
+</head>
+
+<body id="create">
+
+    <div class="libraryHeading">
+        <ion-icon class="icon" name="musical-notes-outline" size="large"></ion-icon>
+        <h1>Your Spotify Library</h1>   
+    </div>
+
+    <div class="explanation">
+        <h5 style="color:white;">Select the playlists that you want to filter</h5>  
+    </div>
+    
+    <div class="userProfileIcon">
+        <a href="#" onclick="userProfileClicked();"><ion-icon name="person-circle-outline" size="large"></ion-icon></a>
+    </div>
+
+    <div class="rowPlaylists">
+
+        <a href="#" id="1" onclick="selectPlaylist(this)" class="playlist">
+            <p class="playlistNumber">1</p>
+            <img class="playlistCover" src="photos/liked.jpg">   
+            <p class="playlistTitle">Liked Songs</p>    
+        </a>
+
+        <a href="#" id="2" onclick="selectPlaylist(this)" class="playlist">
+            <p class="playlistNumber">2</p>
+            <img class="playlistCover" src="photos/tiktok.jpg">   
+            <p class="playlistTitle">TikTok</p>    
+        </a>
+
+        <a href="#" id="3" onclick="selectPlaylist(this)" class="playlist">
+            <p class="playlistNumber">3</p>
+            <img class="playlistCover" src="photos/afrobeats.jpg">   
+            <p class="playlistTitle">Afrobeats</p>    
+        </a>
+
+        <a href="#" id="4" onclick="selectPlaylist(this)" class="playlist">
+            <p class="playlistNumber">4</p>
+            <img class="playlistCover" src="photos/mother.jpg">   
+            <p class="playlistTitle">Mother</p>    
+        </a>
+
+        <a href="#" id="5" onclick="selectPlaylist(this)" class="playlist">
+            <p class="playlistNumber">5</p>
+            <img class="playlistCover" src="photos/indiepop.jpg">   
+            <p class="playlistTitle">Indie Pop</p>    
+        </a>
+
+        <a href="#" id="6" onclick="selectPlaylist(this)" class="playlist">
+            <p class="playlistNumber">6</p>
+            <img class="playlistCover" src="photos/pfizer.jpg">   
+            <p class="playlistTitle">Pfizer</p>
+        </a>
+
+        <a href="#" id="7" onclick="selectPlaylist(this)" class="playlist">
+            <p class="playlistNumber">7</p>
+            <img class="playlistCover" src="photos/blue.jpg">   
+            <p class="playlistTitle">Blue</p>    
+        </a>
+
+        <a href="#" id="8" onclick="selectPlaylist(this)" class="playlist">
+            <p class="playlistNumber">8</p>
+            <img class="playlistCover" src="photos/golden.jpg">   
+            <p class="playlistTitle">Golden</p>    
+        </a>
+
+        <a href="#" id="9" onclick="selectPlaylist(this)" class="playlist">
+            <p class="playlistNumber">9</p>
+            <img class="playlistCover" src="photos/chill.jpg">   
+            <p class="playlistTitle">Chill</p>    
+        </a>
+
+        <a href="#" id="10" onclick="selectPlaylist(this)" class="playlist">
+            <p class="playlistNumber" >10</p>
+            <img class="playlistCover" src="photos/femalerap.jpg">   
+            <p class="playlistTitle">Female Rap</p>    
+        </a>
+
+    </div>
+
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".playlist"), {
+            // querySelectorAll
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.5
+        });
+    </script>
+
+    <div class="buttonRow">
+        <button class="button" onclick="selectAll()">Select All</button>
+    </div>
+
+    <div class="genreHeading">
+        <ion-icon class="icon" name="options-outline" size="large"></ion-icon>
+        <h1>Genres We Found</h1>  
+    </div>
+
+    <div class="explanation">
+        <h5>Select the subgenres you want in your playlist</h5>  
+    </div>
+    
+    <div class="rowDropdowns">
+
+        <div class="multiselect">
+            <div class="selectBox" id="1" onclick="showCheckboxes(this)">
+                <select class="selectBoxRect"><option>R&B (37)</option></select>
+                <div class="overSelect"></div>
+            </div>
+            <div class="checkboxes" id="checkboxes1">
+                <label for="one"><input type="checkbox" id="one" />Contemporary R&B (12)</label>
+                <label for="two"><input type="checkbox" id="two" />Disco (8)</label>
+                <label for="three"><input type="checkbox" id="three" />Doo Wop (6)</label>
+                <label for="four"><input type="checkbox" id="four" />Motown (5)</label>
+                <label for="five"><input type="checkbox" id="five" />Neo-Soul (3)</label>
+                <label for="six"><input type="checkbox" id="six" />Quiet Storm (2)</label>
+                <label for="seven"><input type="checkbox" id="seven" />Soul (1)</label>
+            </div>
+        </div>    
+
+        <div class="multiselect">
+            <div class="selectBox" id="2" onclick="showCheckboxes(this)">
+                <select class="selectBoxRect"><option>Pop (32)</option></select>
+                <div class="overSelect"></div>
+            </div>
+            <div class="checkboxes" id="checkboxes2">
+                <label for="one"><input type="checkbox" id="one" />Art Pop(10)</label>
+                <label for="two"><input type="checkbox" id="two" />Dance Pop (8)</label>
+                <label for="three"><input type="checkbox" id="three" />Orchestral (6)</label>
+                <label for="four"><input type="checkbox" id="four" />Country (5)</label>
+                <label for="five"><input type="checkbox" id="five" />Indie (2)</label>
+                <label for="six"><input type="checkbox" id="six" />Bubblegum (1)</label>
+            </div>
+        </div>    
+
+        <div class="multiselect">
+            <div class="selectBox" id="3" onclick="showCheckboxes(this)">
+                <select class="selectBoxRect"><option>Rap (28)</option></select>
+                <div class="overSelect"></div>
+            </div>
+            <div class="checkboxes" id="checkboxes3">
+                <label for="one"><input type="checkbox" id="one" />Old School (11)</label>
+                <label for="two"><input type="checkbox" id="two" />Boom-Bap (7)</label>
+                <label for="three"><input type="checkbox" id="three" />Jazz (5)</label>
+                <label for="four"><input type="checkbox" id="four" />Trap (5)</label>
+                <label for="five"><input type="checkbox" id="five" />Mumble (3)</label>
+                <label for="six"><input type="checkbox" id="six" />Rap (2)</label>
+                <label for="seven"><input type="checkbox" id="seven" />Country (1)</label>
+                <label for="eight"><input type="checkbox" id="eight" />Gangsta (1)</label>
+            </div>
+            
+        </div>    
+
+        <div class="multiselect">
+            <div class="selectBox" id="4" onclick="showCheckboxes(this)">
+                <select class="selectBoxRect"><option>Afrobeats (14)</option></select>
+                <div class="overSelect"></div>
+            </div>
+            <div class="checkboxes" id="checkboxes4">
+                <label for="one"><input type="checkbox" id="one" />Hiplife (5)</label>
+                <label for="two"><input type="checkbox" id="two" />Dance Hall (3)</label>
+                <label for="three"><input type="checkbox" id="three" />Soca (1)</label>
+                <label for="four"><input type="checkbox" id="four" />Juju (1)</label>
+                <label for="five"><input type="checkbox" id="five" />Highlife (1)</label>
+                <label for="six"><input type="checkbox" id="six" />Ndombolo (1)</label>
+                <label for="seven"><input type="checkbox" id="seven" />Naija (1)</label>
+                <label for="eight"><input type="checkbox" id="eight" />Azonto (1)</label>
+            </div>
+        </div>    
+
+        <div class="multiselect">
+            <div class="selectBox" id="5" onclick="showCheckboxes(this)">
+                <select class="selectBoxRect"><option>Electronic (5)</option></select>
+                <div class="overSelect"></div>
+            </div>
+            <div class="checkboxes" id="checkboxes5">
+                <label for="one"><input type="checkbox" id="one" />Disco (2)</label>
+                <label for="two"><input type="checkbox" id="two" />EDM (1)</label>
+                <label for="three"><input type="checkbox" id="three" />Jungle (1)</label>
+                <label for="four"><input type="checkbox" id="four" />House (1)</label>
+            </div>
+        </div>    
+
+    </div>
+
+
+    <div class="buttonRow">
+        <button class="button" onclick="createPlaylist()">Create Playlist</button>
+    </div>
+
+    <div class="configurations">
+        <a href="#" onclick="changeLightMode();"><ion-icon id="lightModeIcon" name="moon-outline" size="small"></ion-icon></a>
+    </div>
+
+</body>
+</html>
